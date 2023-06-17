@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Task 18</title>
+</head>
+<body>
+    <main>
+        <dragging-container class="c">
+            <circle-container onmouseenter="hoverEnter(event)" onmouseleave="hoverLeave(event)">
+                <circle-element onclick="addCircle(event)" class="e top">
+                    <circle-text>
+                        1
+                    </circle-text>
+                </circle-element>
+                <circle-element onclick="addCircle(event)" class="e right">
+                    <circle-text>
+                        2
+                    </circle-text>
+                </circle-element>
+                <circle-element onclick="addCircle(event)" class="e left"> 
+                    <circle-text>
+                        3
+                    </circle-text>
+                </circle-element>
+                <circle-element onclick="addCircle(event)" class="e bottom">
+                    <circle-text>
+                        4
+                    </circle-text>
+                </circle-element>
+                <circle-dragger onmousedown="startDrag(event)"></circle-dragger>
+                <circle-cover></circle-cover>
+            </circle-container>
+        </dragging-container>
+    </main>
+    <template id="circle">
+        <dragging-container class="c">
+            <circle-container onmouseenter="hoverEnter(event)" onmouseleave="hoverLeave(event)">
+                <circle-element onclick="addCircle(event)" class="e top">
+                    <circle-text>
+                        1
+                    </circle-text>
+                </circle-element>
+                <circle-element onclick="addCircle(event)" class="e right">
+                    <circle-text>
+                        2
+                    </circle-text>
+                </circle-element>
+                <circle-element onclick="addCircle(event)" class="e left"> 
+                    <circle-text>
+                        3
+                    </circle-text>
+                </circle-element>
+                <circle-element onclick="addCircle(event)" class="e bottom">
+                    <circle-text>
+                        4
+                    </circle-text>
+                </circle-element>
+                <circle-dragger onmousedown="startDrag(event)"></circle-dragger>
+                <circle-cover></circle-cover>
+            </circle-container>
+        </dragging-container>
+    </template>
+    <template id="link">
+        <hr onclick="chooseLink(event)">
+    </template>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+}
+:root {
+    --background-color: rgb(34, 34, 34);
+    --font-color: rgb(238, 238, 238);
+    --accent-color: rgb(255, 123, 0);
+}
+* {
+    color: inherit;
+    background-color: inherit;
+    font-size: inherit;
+}
+html, body {
+    font-size: 2vmax;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-color);
+    color: var(--font-color);
+}
+circle-container {
+    border-radius: 50%;
+    border: solid var(--accent-color) 2px;
+    height: 6rem;
+    width: 6rem;
+    transform: rotate(45deg);
+    background-color: var(--font-color);
+    color: var(--background-color);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    position: relative;
+    cursor: pointer;
+}
+circle-cover {
+    border-radius: 50%;
+    height: 6rem;
+    width: 6rem;
+    display: block;
+    position: absolute;
+}
+circle-dragger {
+    border-radius: 50%;
+    height: 0.5rem;
+    width: 0.5rem;
+    border: solid var(--accent-color) 2px;
+    top: 2.7rem;
+    left: 2.7rem;
+    display: block;
+    position: absolute;
+}
+dragging-container {
+    position: absolute;
+    background-color: transparent;
+}
+.dragging circle-container {
+    outline: dashed var(--font-color) 2px;
+    z-index: 2;
+}
+hr {
+    margin: 0;
+    background-color: var(--accent-color);
+    border: none;
+    height: 2px;
+}
+hr.dragging {
+    outline: dashed var(--font-color) 2px;
+}
+circle-element {
+    background-color: var(--font-color);
+    color: var(--background-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.1s ease-out;
+}
+circle-element:hover {
+    color: var(--font-color);
+    background-color: var(--accent-color);
+}
+circle-text {
+    transform: rotate(-45deg);
+}
+.top {
+    border-top-left-radius: 100%;
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    border-bottom: solid var(--accent-color) 1px;
+    border-right: solid var(--accent-color) 1px;
+}
+.right {
+    border-top-right-radius: 100%;
+    padding-top: 0.5rem;
+    padding-right: 0.5rem;
+    border-bottom: solid var(--accent-color) 1px;
+    border-left: solid var(--accent-color) 1px;
+}
+.left {
+    border-bottom-left-radius: 100%;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    border-right: solid var(--accent-color) 1px;
+    border-top: solid var(--accent-color) 1px;
+}
+.bottom {
+    border-bottom-right-radius: 100%;
+    padding-bottom: 0.5rem;
+    padding-right: 0.5rem;
+    border-left: solid var(--accent-color) 1px;
+    border-top: solid var(--accent-color) 1px;
+}
